@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation, Transition and Transformation</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        header {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 30px;
+            -webkit-text-stroke: 1px red;
+            color: orange;
+            background-color: lightpink;
+            border: 2px solid darkmagenta;
+        }
+        h1 {
+            text-decoration: underline;
+            color: darkorange;
+        }
+        section {
+            margin: 0px;
+            padding: 5px;
+            border: 3px solid black;
+            border-top: 0px;
+            background-color: beige;
+        }
+        hr {
+            border: 2px dotted orange;
+        }
+        button {
+            margin: 0.5em; 
+            height: 3em; 
+            width: 6em;
+            background-color: black;
+            color: white;
+        }
+        button:hover {
+            background-color: red;
+            color: yellow;
+            font-weight: bold;
+        }
+        button:active {
+            background-color: orange;
+            color: red;
+            font-weight: bold;
+        }
+        #transition {
+            margin: 0.5em; 
+            height: 3em; 
+            width: 6em;
+            background-color: black;
+            color: white;
+
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+        }
+        #transition:hover {
+            background-color: red;
+            color: yellow;
+            font-weight: bold;
+
+            /* transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s; */
+
+            transition: all 0.5s ease-in-out 0s; /* shortcut */
+        }
+        #transition:active {
+            background-color: orange;
+            color: red;
+            font-weight: bold;
+        }
+        #rotation:hover {
+            transform: rotate(-180deg);
+            transition: all 1s ease-in-out 0s;
+        }
+        #rotation:active {
+            transform: rotate(0deg);
+            transition: all 1s ease-in-out 0s;
+        }
+        #scale:hover {
+            transform: scale(1.5);
+            transition: all 1s ease-in-out 0s;
+        }
+        #scale:active {
+            transform: scale(2);
+            transition: all 1s ease-in-out 0s;
+        }
+        #translate:hover {
+            transform: translate(1em, 1em);
+            transition: all 1s ease-in-out 0s;
+        }
+        #translate:active {
+            transform: translate(0em, 0em);
+            transition: all 1s ease-in-out 0s;
+        }
+        #skew:hover {
+            transform: skew(45deg);
+            transition: all 1s ease-in-out 0s;
+        }
+        #skew:active {
+            transform: skew(0deg);
+            transition: all 1s ease-in-out 0s;
+        }
+        #animation:active { 
+            animation: 2s animate 0s infinite alternate;
+        }
+        @keyframes animate {
+            0% {
+                margin-left: 0.5em;
+                transform: rotate(0deg);
+            }
+            100% {
+                margin-left: 10em;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Animation, Transition and Transformation</header>
+    <main>
+        <section>
+            <h1>Pseudo Classes</h1>
+            <p>
+                Pseudo-classes are used to style elements based on their state. They are not actual HTML elements but keywords that are used to select elements. For e.g:- :hover, :active
+            </p>
+            <hr>
+            <button>Button</button>
+        </section>
+        <section>
+            <h1>Transition</h1>
+            <p>
+                Transition is a CSS property that lets you specify how a property changes when the property is being animated. It's used to smoothly animate changes between the values of CSS properties.
+            </p>
+            <ul style="padding-left: 2em;">
+                <li>transition-property: The CSS property you want to animate.</li>
+                <li>transition-duration: The duration of the animation.</li>
+                <li>transition-timing-function: The timing function for the animation.</li>
+                <li>transition-delay: The delay before the animation starts.</li>
+            </ul>
+            <hr>
+            <button id="transition">transition</button>
+        </section>
+        <section>
+            <h1>Transform</h1>
+            <p>
+                Transform is a CSS property that lets you manipulate an element's position, size, shape, and color. It's used to create 3D transformations and animations.
+            </p>
+            <hr>
+            <button id="rotation" style="margin-top: 3em;">rotate</button>
+            <button id="scale" style="margin-top: 3em;">scale</button>
+            <button id="translate" style="margin-top: 3em;">translate</button>
+            <button id="skew" style="margin-top: 3em;">skew</button>
+        </section>
+        <section>
+            <h1>Animation</h1>
+            <p>
+                Animation is a technique used to create dynamic effects on a web page. It involves creating a set of CSS rules that define the animation, and then applying that animation to HTML elements.
+            </p><br>
+            <pre>Syntax: @keyframes &lt;function&gt; {
+            from { /* starting state */ }
+            to { /* ending state */ }
+        }
+            </pre>
+            <hr>
+            <button id="animation" style="margin-top: 3em;">animate</button>
+        </section>
+    </main>
+</body>
+</html>

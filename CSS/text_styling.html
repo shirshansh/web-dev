@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styling</title>
+    <style>
+        header {
+            color: red;
+            font-family: Impact;
+            font-size: 30px;
+            text-decoration: underline;
+            text-align: center;
+        }
+        #navigator {
+            color: blueviolet;
+            font-weight: bold;
+            line-height: 18px;
+        }
+        #navigator span {
+            font-size: 22px;
+        }
+        h1 {
+            color: darkblue;
+        }
+        h2 {
+            color: rgba(0, 0, 139, 0.805);
+            font-size: 20px;
+        }
+        p, .text-transform, .other-things {
+            color: blueviolet;
+            font-style: italic;
+        }
+        .list-items, .text-decoration-style, .text-decoration-color {
+            color: blueviolet;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>Text Styling</header>
+    
+    <nav id="navigator">
+        <span>Go to:</span>
+        <ul style="margin: 0">
+            <a href="#text-decoration"><li class="list-items" >Text Decoration</li></a>
+            <a href="#text-decoration-style"><li class="list-items">Text Decoration Style</li></a>
+            <a href="#text-decoration-color"><li class="list-items">Text Decoration Color</li></a>
+            <a href="#text-transform"><li class="list-items" >Text Transform</li></a>
+            <a href="#other-things"><li class="list-items" >Other Things</li></a>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h1 id="text-decoration">Text Decoration</h1>
+            <p style="text-decoration: underline;">Underlined text</p>
+            <p style="text-decoration: overline;">Overlined text</p>
+            <p style="text-decoration: line-through;">Line-through text</p>
+        </section>
+        <section>
+            <h1 id="text-decoration-style">Text Decoration Style</h1>
+            <p class="text-decoration-style" style="text-decoration-style: dashed;">Dashed text</p>
+            <p class="text-decoration-style" style="text-decoration-style: dotted;">Dotted text</p>
+            <p class="text-decoration-style" style="text-decoration-style: double;">Double text</p>
+            <p class="text-decoration-style" style="text-decoration-style: wavy;">Wavy text</p>
+        </section>
+        <section>
+            <h1 id="text-decoration-color">Text Decoration Color</h1>
+            <p class="text-decoration-color" style="text-decoration-color: red;">I've got red underline</p>
+        </section>
+        <section>
+            <h1 id="text-transform">Text Transform</h1>
+            <p class="text-transform" style="text-transform: none;">Hippo crypto (original)</p>
+            <p class="text-transform" style="text-transform: capitalize;">Hippo crypto (capitalize)</p>
+            <p class="text-transform" style="text-transform: lowercase;">Hippo crypto (lowercase)</p>
+            <p class="text-transform" style="text-transform: uppercase;">Hippo crypto (uppercase)</p>
+        </section>
+        <section>
+            <h1 id="other-things">Other Things</h1>
+            <p class="other-things">line-height</p>
+            <h2>Font Properties</h2>
+            <ul class="other-things">
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-weight</li>
+                <li>font-style</li>
+            </ul>
+            <h2>Text Align (text-align)</h2>
+            <div class="other-things">
+                <p style="text-align: left;">Left aligned text</p>
+                <p style="text-align: center;">Center aligned text</p>
+                <p style="text-align: right;">Right aligned text</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

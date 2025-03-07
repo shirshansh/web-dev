@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox and Grid</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        header {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 30px;
+            -webkit-text-stroke: 1px red;
+            color: orange;
+            background-color: lightpink;
+            border: 2px solid darkmagenta;
+        }
+        h1 {
+            text-decoration: underline;
+            color: darkorange;
+        }
+        h2 {
+            margin-top: 1em;
+            color: orange;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        section {
+            margin: 0px;
+            padding: 5px;
+            border: 3px solid black;
+            border-top: 0px;
+            background-color: beige;
+        }
+        hr {
+            border: 2px dotted orange;
+        }
+        a {
+            color: darkslategray;
+        }
+        .flex {
+            border: 2px solid orange;
+            height: 2em;
+            width: 3em;
+            align-content: center;
+            text-align: center;
+            margin: 0.2em;
+            background-color: yellow;
+        }
+        li>div {
+            border: 2px solid red; 
+            height: 10em; 
+            background-color: tomato; 
+            display: flex;
+        }
+        section>ul {
+            padding-left: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>Flexbox and Grid</header>
+    <main>
+        <section>
+            <h1>float properties</h1>
+                <p>float specifies how an element should be floated. Values of it are: left, right, none, inline-start, inline-end.</p>
+                <hr>
+                e.g. =><br>
+                <div style="border: 2px solid black; height: 5em; align-content: center;">
+                    <div style="float: left; height: 3em; width: 5em; border: 1px solid black; text-align: center; align-content: center;">left</div>
+                    <div style="float: right; height: 3em; width: 5em; border: 1px solid black; text-align: center; align-content: center;">right</div>
+                </div>
+        </section>
+        <section>
+            <h1>Flexbox</h1>
+                <ul>
+                    <li>It's a 1-d layout in which elements are arrange either in rows or columns.</li>
+                    <li>display: flex</li>
+                    <li>flex-direction:
+                        <nav>
+                            <ul style="padding-left: 1em;">
+                                <a href="#row"><li>row (default)</li></a>
+                                <a href="#row_reverse"><li>row-reverse</li></a>
+                                <a href="#column"><li>column</li></a>
+                                <a href="#column-reverse"><li>column-reverse</li></a>
+                            </ul>
+                        </nav>
+                        <hr>
+                        <h2 id="row">row</h2>
+                        <div>
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <h2 id="row_reverse">row-reverse</h2>
+                        <div style="flex-direction: row-reverse;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <h2 id="column">column</h2>
+                        <div style="flex-direction: column;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <h2 id="column-reverse">column-reverse</h2>
+                        <div style="flex-direction: column-reverse;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <hr style="margin-top: 1em;">
+                    </li>
+                    <li>justify-content: (positioning contents along main axis [horizontally])
+                        <nav>
+                            <ul style="padding-left: 1em;">
+                                <a href="#flex-start"><li>flex-start</li></a>
+                                <a href="#flex-end"><li>flex-end</li></a>
+                                <a href="#center"><li>center</li></a>
+                                <a href="#space-between"><li>space-between</li></a>
+                                <a href="#space-around"><li>space-around</li></a>
+                                <a href="#space-evenly"><li>space-evenly</li></a>
+                            </ul>
+                        </nav>
+                        <hr>
+                        <h2 id="flex-start">flex-start</h2>
+                        <div style="justify-content: flex-start;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <h2 id="flex-end">flex-end</h2>
+                        <div style="justify-content: flex-end;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <h2 id="center">center</h2>
+                        <div style="justify-content: center;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <h2 id="space-between">space-between</h2>
+                        <div style="justify-content: space-between;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <h2 id="space-around">space-around</h2>
+                        <div style="justify-content: space-around;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <h2 id="space-evenly">space-evenly</h2>
+                        <div style="justify-content: space-evenly;">
+                            <div class="flex">Box1</div>
+                            <div class="flex">Box2</div>
+                            <div class="flex">Box3</div>
+                        </div>
+                        <hr style="margin: 1em 0em;">
+                    </li>
+                    <li>align-item</li>
+                    <li>align-content</li>
+                    <li>align-self</li>
+                </ul>
+        </section>
+        <section>
+            <h1>Grid Layout</h1>
+                <ul>
+                    <li>It's a 2-d layout</li>
+                </ul>
+        </section>
+        <section>
+            <h1>Media Queries</h1>
+                <ul>
+                    <li>Used to create <b style="color: red;"><i>Responsive Websites</i></b></li>
+                    <li>Syntax: @media screen and (min-width: 230px) {<pre>
+                &lt;css styling&gt;
+        }<pre>      </li>
+                </ul>
+        </section>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display and Position</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        header {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 30px;
+            color: darkblue;
+            background-color: wheat;
+            border: 2px solid chocolate;
+        }
+        h1 {
+            text-decoration: underline;
+            color: darkblue;
+
+        }
+        h2 {
+            color: blue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        div {
+            margin-top: 10px;
+            border: 2px solid goldenrod;
+            height: 30px;
+            width: 50px;
+            text-align: center;
+        }
+        p {
+            text-indent: 10px;
+        }
+        .block {
+            display: block; 
+        }
+        .inline {
+            display: inline;
+        }
+        .inline-block {
+            display: inline-block;
+        }
+        .none {
+            display: none;
+        }
+        section {
+            margin: 0px;
+            padding: 5px;
+            border: 3px solid black;
+            border-top: 0px;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <header>Display and Position</header>
+    <main>
+        <section>
+            <h1>display properties</h1>
+            <h2>block</h2>
+                <p>Elements with <b>display: block</b> occupy complete horizontal space</p>
+                <div class="block">Box1</div>
+                <div class="block">Box2</div>
+            <h2>inline</h2>
+                <p><b>display: inline</b> prevents height and width from having an effect</p>
+                <div class="inline">Box1</div>
+                <div class="inline">Box2</div>
+            <h2>inline-block</h2>
+                <p>But, <b>display: inline-block</b> doesn't prevent height and width from having an effect</p>
+                <div class="inline-block">Box1</div>
+                <div class="inline-block">Box2</div>
+            <h2>none</h2>
+                <p>Hides the element</p>
+                <div class="none">Box1</div>
+                <div class="none">Box2</div>
+        </section>
+        <section>
+            <h1>Relative Units</h1>
+            <h2>%</h2>
+                <p>% of parent element</p>
+            <h2>em</h2>
+                <p>em is relative to the font size of current element</p>
+            <h2>rem</h2>
+                <p>rem is relative to the font size of the root element</p>
+            <h2>vh/vm</h2>
+                <p>vh is relative to viewport's height</p>
+                <p>vw is relative to viewport's width</p>
+        </section>
+        <section>
+            <h1>position properties</h1>
+            <h2>static</h2>
+                <ul style="padding-left:25px;">
+                    <li>Element will be at its normal position</li>
+                    <li>Scrolling will work normally for it</li>
+                </ul>
+            <h2 style="position:absolute; opacity:0.5;">relative</h2>
+            <h2 style="position: relative; top:2px; left:2px; margin-bottom: 5px;">relative</h2>
+                <ul style="padding-left:25px;">
+                    <li>Element will be relative to its normal position</li>
+                    <li>Scrolling will work normally for it</li>
+                    <li>Here, relative sub heading is <b>position:relative</b>, <b>top:2px</b> and <b>left:2px</b>.</li>
+                </ul><br>
+            <h2 style="position:absolute; opacity:0.5; top:788px; left:7px">absolute</h2>
+            <h2 style="position:absolute; top:791px; left:10px">absolute</h2>
+                <ul style="padding-left:25px;">
+                    <li>Element will be relative to the top left corner of the webpage</li>
+                    <li>Scrolling will work normally for it</li>
+                    <li>Here, absolute sub heading is <b>position:absolute</b>, <b>top:791px</b> and <b>left:10px</b>.</li>
+                </ul><br>
+            <h2 style="position:absolute; opacity:0.5; top:858px; left:7px;">fixed</h2>
+            <h2 style="position:fixed; bottom:10px; right:10px;">fixed</h2>
+                <ul style="padding-left:25px;">
+                    <li>Element will be fixed in the webpage</li>
+                    <li>Scrolling won't affect it</li>
+                    <li>Here, fixed sub heading is <b>position:fixed</b>, <b>bottom:10px</b> and <b>right:10px</b>.</li>
+                </ul>
+        </section>
+    </main>
+</body>
+</html>

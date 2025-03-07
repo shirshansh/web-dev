@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS -->
+    <!-- <link rel="stylesheet" href="../CSS/index.css" type="text/css"> -->
+    <!-- For the above we will create index.css in the relevant folder
+         and then define the styling -->
+
+    <title>Selector</title>
+
+    <!-- Internal CSS -->
+    <style>
+        * { /* Universal Selector */
+            color: black;
+        }
+        header { /* Element Selector */
+            color: darkorange;
+        }
+        #heading { /* ID Selector */
+            color: darkmagenta;
+        }
+        .point { /* Class Selector */
+            color: darkslateblue;
+        }
+        h2, h3 { /* Group Selector */
+            color: red;
+        }
+        #descendant p, #descendant b, #descendant i { /* Descendant Selector */
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>Selectors</header>
+    <main>
+        <p>My color is defined by Universal Selector</p>
+        <h1 id="heading">Types of Selectors:</h1>
+        <ol>
+            <li class="point">* is Universal Selector</li>
+            <li class="point">Type Selector e.g.=> header {}</li>
+            <li class="point">ID Selector e.g.=> #&ltid value&gt</li>
+            <li class="point">Class Selector e.g. => <b>.</b>&ltclass value&gt</li>
+            <li class="point">Group Selector e.g. => h1, h2, h3 {}</li>
+        </ol>
+        <h2>Kaboom!</h2>
+        <h3>Boom!</h3>
+        <hr>
+        <div id="descendant">
+            <b>
+                <p>This is a paragraph inside a <i>b</i> tag which in turn is inside <i>div</i> tag with the id="descendant" with coloring done using descendant selector.</p>
+            </b>
+        </div>
+        <p>This is a paragraph outside div and therefore is not affected by descendant selector.</p>
+    </main>
+</body>
+</html>

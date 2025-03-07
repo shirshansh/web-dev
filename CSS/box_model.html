@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        header {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: red;
+            border: 5px solid black;
+            border-radius: 2cap;
+            letter-spacing: 5px;
+            font-size: 50px;
+            text-align: center;
+        }
+        section {
+            border: 2px solid black;
+            padding: 5px;
+            text-align: center;
+            font-family: cursive;
+            font-weight: bold;
+        }
+        #margin {
+            background-color: orange;
+            margin-top: 20px;
+        }
+        #border, #padding, #content {
+            margin: 10px;
+        }
+        #border {
+            background-color: lightskyblue;
+        }
+        #padding {
+            background-color: cyan;
+        }
+        #content {
+            background-color: lightblue;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>Box Model</header>
+    <main>
+        <section id="margin">
+            Margin
+            <section id="border">
+                Border
+                <section id="padding">
+                    Padding
+                    <section id="content">
+                        Content
+                    </section>   
+            </section>
+        </section>
+    </main>
+</body>
+</html>
